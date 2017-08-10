@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+body{margin:30px;
+padding:0;
+font-family: 'Handlee', cursive;
+font-weight: bold;
+background-color: #E5F9FF;}
+
+#title{text-align: center;
+font-family: 'Handlee', cursive;
+font-size:40px;}
+#theme{text-align: center;
+font-family: 'Handlee', cursive;}
+#gameContent{
+    padding:20px;
+text-align: center;
+    border:1px solid black;
+height:420px;}
