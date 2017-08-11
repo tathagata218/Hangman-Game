@@ -4,10 +4,11 @@ var lengthofCarArray=carCompanies.length;
 var wins=0;
 var trys=20;
 var losses=0;
-var dashArr=[];
-var letterUsedArr=[];
+
 
 window.onload = function initateHangman(){
+    var dashArr=[];
+var letterUsedArr=[];
 
 var randomNumber = Math.floor(Math.random()*lengthofCarArray);
 var randomCar=carCompanies[randomNumber];
@@ -21,7 +22,7 @@ document.getElementById("winsDisplay").innerHTML="Wins: "+wins;
 document.getElementById("lossDisplay").innerHTML="Loss: "+losses;
 
 document.onkeyup=function(data){
-    console.log(data);
+    // console.log(data);
 
     
     if(randomCar.indexOf(data.key) >= 0 && letterUsedArr.indexOf(data.key)<0 && data.keyCode>=65 && data.keyCode<=90){
@@ -36,10 +37,11 @@ document.onkeyup=function(data){
     }
     if(dashArr.join('')==randomCar){
             wins++;
-            dashArr=[];
-            letterUsedArr=[];
-            window.onload();
+            // dashArr=[];
+            // letterUsedArr=[];
             trys=20;
+            window.onload();
+            
             document.getElementById("noOfTrysDisplay").innerHTML="Number of Tyes: "+trys;
             document.getElementById("lettersDisplay").innerHTML="Letters Used: "+letterUsedArr;   
             }
@@ -68,9 +70,9 @@ else{
 // else 
     if(trys==0){
     trys=20;
-    dashArr=[];
+    // dashArr=[];
     losses++;
-    letterUsedArr=[];
+    // letterUsedArr=[];
     window.onload();
 }
 
